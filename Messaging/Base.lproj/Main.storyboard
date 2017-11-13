@@ -34,6 +34,9 @@
                                 <state key="normal" title="SignIn  /  SignUp">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="SignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Gf-Ze-oj7"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEv-tv-miF">
                                 <rect key="frame" x="46" y="403" width="283" height="30"/>
@@ -56,6 +59,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="aDd-zm-aKR" id="gmS-4O-YtI"/>
+                        <outlet property="passwordField" destination="zEv-tv-miF" id="C5Z-Kt-9YE"/>
                         <segue destination="N89-T8-e0v" kind="show" identifier="toSignUp" id="NV4-C7-PCo"/>
                         <segue destination="eb7-7j-thc" kind="show" identifier="toMessages" id="HEa-KW-dhr"/>
                     </connections>
@@ -82,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="879" y="38"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="NS0-Hj-gII">
             <objects>
-                <viewController id="N89-T8-e0v" sceneMemberID="viewController">
+                <viewController id="N89-T8-e0v" customClass="SignUpVC" customModule="Messaging" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LC9-Pb-pqN"/>
                         <viewControllerLayoutGuide type="bottom" id="j1B-JR-451"/>
@@ -104,12 +109,18 @@
                                 <state key="normal" title="Go Back">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="GoBack:" destination="N89-T8-e0v" eventType="touchUpInside" id="bHN-5V-xXV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWv-ea-caJ">
                                 <rect key="frame" x="134" y="580" width="107" height="30"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountWith_sender:" destination="N89-T8-e0v" eventType="touchUpInside" id="VIL-dB-Tcz"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TFI-5q-TL0">
                                 <rect key="frame" x="123" y="122" width="128" height="128"/>
@@ -123,6 +134,9 @@
                                 <state key="normal" title="Add Photo">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectedImgPicked:" destination="N89-T8-e0v" eventType="touchUpInside" id="iNd-fR-qxm"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayi-pa-w6I">
                                 <rect key="frame" x="46" y="390" width="283" height="30"/>
@@ -149,10 +163,19 @@
                             <constraint firstItem="1zD-5h-TOW" firstAttribute="centerX" secondItem="K23-LS-bo7" secondAttribute="centerX" id="yok-Cv-raQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signUpButton" destination="qWv-ea-caJ" id="Rph-HW-QWG"/>
+                        <outlet property="userImagePick" destination="TFI-5q-TL0" id="QUE-IH-gxI"/>
+                        <outlet property="usernameField" destination="ayi-pa-w6I" id="JoT-K8-rZL"/>
+                        <segue destination="eb7-7j-thc" kind="show" identifier="toMesseges" id="E6x-dB-ps0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Beq-dZ-Zfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="777.66116941529242"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HEa-KW-dhr"/>
+    </inferredMetricsTieBreakers>
 </document>
