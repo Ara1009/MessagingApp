@@ -165,7 +165,7 @@
                     </view>
                     <connections>
                         <outlet property="signUpButton" destination="qWv-ea-caJ" id="Rph-HW-QWG"/>
-                        <outlet property="userImagePick" destination="TFI-5q-TL0" id="QUE-IH-gxI"/>
+                        <outlet property="userImagePicker" destination="TFI-5q-TL0" id="C8k-cb-MUC"/>
                         <outlet property="usernameField" destination="ayi-pa-w6I" id="JoT-K8-rZL"/>
                         <segue destination="eb7-7j-thc" kind="show" identifier="toMesseges" id="E6x-dB-ps0"/>
                     </connections>
@@ -176,6 +176,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HEa-KW-dhr"/>
+        <segue reference="E6x-dB-ps0"/>
     </inferredMetricsTieBreakers>
 </document>

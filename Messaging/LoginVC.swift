@@ -65,7 +65,7 @@ class LoginVC: UIViewController {
 
                     KeychainWrapper.standard.set(self.userUid, forKey: "uid")
                     
-                    self.performSegue(withIdentifier: "toMessages", sender: nil)
+                    self.performSegue(withIdentifier: "toMessage", sender: nil)
                     
                 } else {
                         
