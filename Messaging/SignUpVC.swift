@@ -15,7 +15,9 @@ import SwiftKeychainWrapper
 class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var userImagePicker: UIImageView!
+    
     @IBOutlet weak var usernameField: UITextField!
+    
     @IBOutlet weak var signUpButton: UIButton!
     
     var userUid: String!
@@ -31,8 +33,8 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     var username: String!
     
     
-    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         imagePicker = UIImagePickerController()
@@ -103,24 +105,33 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         } else {
         
             username = usernameField.text
+            
             signUpButton.isEnabled = true
         }
         
         guard let img = userImagePicker.image, imageSelected == true else {
+            
             print("Image needs to be selected")
+            
             return
+            
         }
         
         if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
             let imgUid = NSUUID().uuidString
+            
             let metadata = StorageMetadata()
+            
             metadata.contentType = "image/jpeg"
+            
             Storage.storage().reference().child(imgUid).putData(imgData, metadata:metadata) {
                 (metadata, error) in
                 
                 if error != nil {
                     
                     print("Did not upload image")
+                    
                 } else {
                     
                     print("uploaded")
@@ -130,11 +141,13 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                     if let url = downloadURL {
                         
                         self.setUser(img: url)
+                        
                     }
                 }
             }
         }
     }
+    
     
     @IBAction func createAccount (_sender: AnyObject) {
         
@@ -143,22 +156,31 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             if error != nil {
                 
                 print("User has not been created")
+                
             } else {
                 
                 if let user = user{
+                    
                     self.userUid = user.uid
+                    
                 }
             }
             
             self.uploadImg()
+            
         })
     }
     
+    
+    // Show the Image Picker
     @IBAction func selectedImgPicked (_ sender: AnyObject) {
         
         present(imagePicker, animated: true, completion: nil)
+        
     }
     
+    
+    //Cancel signup and go back to signin page
     @IBAction func GoBack (_ sender: AnyObject) {
         
         dismiss(animated: true, completion: nil)

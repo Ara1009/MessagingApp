@@ -11,24 +11,31 @@ import Firebase
 import SwiftKeychainWrapper
 
 class LoginVC: UIViewController {
+    
     @IBOutlet weak var emailField: UITextField!
+    
     @IBOutlet weak var passwordField: UITextField!
     
     var userUid: String!
    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
     override func viewDidAppear(_ _animated: Bool) {
-        
         
         if let _ = KeychainWrapper.standard.string(forKey: "uid"){
             
             performSegue(withIdentifier: "toMessages", sender: nil)
+            
         }
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
@@ -49,10 +56,13 @@ class LoginVC: UIViewController {
                 if self.passwordField.text != nil {
                     
                     destination.passwordField =  passwordField.text
+                    
                 }
             }
         }
     }
+    
+    
     @IBAction func SignIn (_ sender: Any) {
     
         if let email = emailField.text, let password = passwordField.text{
@@ -70,10 +80,9 @@ class LoginVC: UIViewController {
                 } else {
                         
                         self.performSegue(withIdentifier:"toSignUp", sender: nil)
-                    }
                     
+                    }
             })
         }
     }
-
 }

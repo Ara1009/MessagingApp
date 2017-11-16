@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F22080101FBDF5730008DEE0 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220800F1FBDF5730008DEE0 /* ChatVC.swift */; };
+		F22080121FBE19E60008DEE0 /* MessageDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22080111FBE19E60008DEE0 /* MessageDetailCell.swift */; };
+		F22080141FBE1AA10008DEE0 /* MessageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22080131FBE1AA10008DEE0 /* MessageDetail.swift */; };
+		F22080181FBE24320008DEE0 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22080171FBE24320008DEE0 /* MessageVC.swift */; };
 		F266319E1FB61AB300EF01CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266319D1FB61AB300EF01CB /* AppDelegate.swift */; };
 		F26631A01FB61AB300EF01CB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266319F1FB61AB300EF01CB /* LoginVC.swift */; };
 		F26631A31FB61AB300EF01CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26631A11FB61AB300EF01CB /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 		49162385E89037DD3433096E /* Pods-Messaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messaging.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messaging/Pods-Messaging.release.xcconfig"; sourceTree = "<group>"; };
 		7232DF8A093F79C7E6158BE2 /* Pods_Messaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC67D0ABA9EC48D652076094 /* Pods-Messaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messaging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Messaging/Pods-Messaging.debug.xcconfig"; sourceTree = "<group>"; };
+		F220800F1FBDF5730008DEE0 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		F22080111FBE19E60008DEE0 /* MessageDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDetailCell.swift; sourceTree = "<group>"; };
+		F22080131FBE1AA10008DEE0 /* MessageDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDetail.swift; sourceTree = "<group>"; };
+		F22080171FBE24320008DEE0 /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		F266319A1FB61AB300EF01CB /* Messaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F266319D1FB61AB300EF01CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F266319F1FB61AB300EF01CB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		F26678B91FB621D40064059C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F22080131FBE1AA10008DEE0 /* MessageDetail.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -108,6 +117,7 @@
 		F26678BA1FB621E20064059C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F22080111FBE19E60008DEE0 /* MessageDetailCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -117,6 +127,8 @@
 			children = (
 				F266319F1FB61AB300EF01CB /* LoginVC.swift */,
 				F26678BC1FB79FE00064059C /* SignUpVC.swift */,
+				F220800F1FBDF5730008DEE0 /* ChatVC.swift */,
+				F22080171FBE24320008DEE0 /* MessageVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -259,10 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22080181FBE24320008DEE0 /* MessageVC.swift in Sources */,
+				F22080121FBE19E60008DEE0 /* MessageDetailCell.swift in Sources */,
 				F26678BD1FB79FE00064059C /* SignUpVC.swift in Sources */,
 				F26631A61FB61AB300EF01CB /* Messaging.xcdatamodeld in Sources */,
 				F26631A01FB61AB300EF01CB /* LoginVC.swift in Sources */,
 				F266319E1FB61AB300EF01CB /* AppDelegate.swift in Sources */,
+				F22080101FBDF5730008DEE0 /* ChatVC.swift in Sources */,
+				F22080141FBE1AA10008DEE0 /* MessageDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
